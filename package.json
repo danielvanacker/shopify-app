@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,11 @@
   },
   "homepage": "https://github.com/danielvanacker/shopify-app#readme",
   "dependencies": {
+    "@shopify/koa-shopify-auth": "^3.1.41",
+    "dotenv": "^8.1.0",
+    "isomorphic-fetch": "^2.2.1",
+    "koa": "^2.8.2",
+    "koa-session": "^5.12.3",
     "next": "^9.0.7",
     "react": "^16.10.1",
     "react-dom": "^16.10.1"
